@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <link rel="icon" href="Quizz.ico">
+        <title>Start OS Quizz</title>
+        <style>
+            body {
+                background: linear-gradient(wheat,grey);
+            }
+            /* .container {
+                margin-top: 150px;
+                background: white;
+                width: 300px;
+                height: auto;
+                font-size: 20px;
+            }
+            button:hover {
+                background-color: wheat;
+            } */
+            .grid {
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px 50px 50px 50px;
+    border: 2px solid #cbcbcb;
+    
+}
+ 
+.grid h1 {
+    font-family: "sans-serif";
+    background:linear-gradient(wheat,grey);
+    font-size: 60px;
+    text-align: center;
+    color: #ffffff;
+    padding: 2px 0px;
+    
+}
+ 
+#score {
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+ 
+.grid #question {
+    font-family: "monospace";
+    font-size: 30px;
+    color: black;
+}
+ 
+.buttons {
+    margin-top: 30px;
+}
+ 
+#btn0, #btn1, #btn2, #btn3 {
+    background:linear-gradient(grey,wheat);
+    width: 250px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #1D3C6A;
+    margin: 10px 40px 10px 0px;
+    padding: 10px 10px;
+}
+ 
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+    cursor: pointer;
+    background-color: #01BBFF;
+}
+ 
+#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
+    outline: 0;
+}
+ 
+#progress {
+    color: #2b2b2b;
+    font-size: 18px;
+}
+        </style>
+    </head>
+    <body>
+        <center>
+            <div class="container">
+                <!-- <p style="margin-left: -30px;">Q1:&nbsp;What is the full form of OS?</p>
+                <input name="Question1" id="q1-1" type="radio">Operating Software<br>
+                <input name="Question1" id="q1-2" type="radio" style="margin-left: -8px;">Operating System<br>
+                <input name="Question1" id="q1-3" type="radio" style="margin-left: -26px;">Official System<br>
+                <input name="Question1" id="q1-4" type="radio" style="margin-left: -41px;">Office Source<br>
+                <p>Q2:&nbsp;The first UNIX operating system was written in?</p>
+                <input name="Question2" id="q2-1" type="radio" style="margin-left: -100px;">Java<br>
+                <input name="Question2" id="q2-2" type="radio" style="margin-left: -85px;">Pascal<br>
+                <input name="Question2" id="q2-3" type="radio" style="margin-left: -8px;">Programming C<br>
+                <input name="Question2" id="q2-4" type="radio" style="margin-left: 17px;">Machine Language<br>
+                <br>
+                <a href="#"><button onclick="check()" style="margin-bottom: 10px;height: 30px;width: 100px;font-size: 20px;border-radius: 10px;border: none;">Next</button></a> -->
+                <div class="grid">
+                    <div id="quiz">
+                        Time left: <span id="timer"></span>
+                        <script>
+                            var sec = 500;
+                            var time = setInterval(myTimer, 1000);
+
+                           function myTimer() {
+                           document.getElementById('timer').innerHTML = sec + "Sec";
+                           sec--;
+                           if (sec == -1) {
+                           clearInterval(time);
+                           alert("Opps! Time out \nClick 'OK' to see your score");
+                           window.showScores();
+                           }
+                        }
+                        </script>
+                        <h1>Quiz Of OS</h1>
+                        <hr style="margin-bottom: 20px">
+             
+                        <p id="question"></p>
+             
+                        <div class="buttons">
+                            <button id="btn0"><span id="choice0"></span></button>
+                            <button id="btn1"><span id="choice1"></span></button>
+                            <button id="btn2"><span id="choice2"></span></button>
+                            <button id="btn3"><span id="choice3"></span></button>
+                        </div>
+             
+                        <hr style="margin-top: 50px">
+                        <footer>
+                            <p id="progress">Question x of y</p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        
+        </center>
+        <script src="app1.js"></script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="icon" href="Quizz.ico">
+        <title>Quizz</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+                background: linear-gradient(grey,wheat);
+            }
+            .container {
+                background: linear-gradient(wheat,grey);
+                height: 300px;
+                width: 300px;
+                text-align: center;
+                justify-content: center;
+                display: inline-block;
+                margin-top: -10px;
+            }
+            button {
+                font-size: 20px;
+                font-family: italic,cursive;
+            }
+            button:hover {
+                background: linear-gradient(grey,rgb(228, 224, 219));
+            }
+            button:focus {
+                outline: none;
+            }
+            h1 {
+                margin-top: 90px;
+                font-size: 50px;
+                font-family: cursive;
+                background: linear-gradient(white,wheat);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1><i>Quizz Of Operating System</i></h1>
+            <div class="container">
+                <p style="margin-top: 90px;">Are you ready for quizz??<br>If yes then click <i class="fa fa-arrow-down"></i></p>
+               <a href="Main.html"> <button style="height:50px;width:150px;border-radius:20px;border:none" onclick = "Timer()">Start Quizz</button></a>
+            </div>
+        </center>
+    </body>
+</html>
